@@ -1,0 +1,8 @@
+{
+  "name": "PropellerAds GO CI",
+  "description": "PropellerAds GO CI workflow template.",
+  "iconName": "go-ci-logo",
+  "categories": [
+    "Go"
+  ]
+}
