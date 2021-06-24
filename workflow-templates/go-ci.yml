@@ -7,7 +7,7 @@ jobs:
     name: golangci-lint
     runs-on: ubuntu-latest
     env:
-      GOPRIVATE: github.com/propellerads/*
+      GOPRIVATE: github.com/garaj-production/*
       GO111MODULE: on
     steps:
       - uses: actions/checkout@v2
