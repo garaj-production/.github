@@ -1,6 +1,6 @@
 {
-  "name": "PropellerAds GO CI",
-  "description": "PropellerAds GO CI workflow template.",
+  "name": "Garaj GO CI",
+  "description": "Garaj GO CI workflow template.",
   "iconName": "go-ci-logo",
   "categories": [
     "Go"
