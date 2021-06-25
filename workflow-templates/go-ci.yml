@@ -1,4 +1,4 @@
-name: go-ci
+name: golang-ci
 on:
   pull_request:
   workflow_dispatch:
@@ -11,10 +11,10 @@ jobs:
       GO111MODULE: on
     steps:
       - uses: actions/checkout@v2
-#      - name: Configure git for private modules
-#        env:
-#          TOKEN: ${{ secrets.TEST }}
-#        run: git config --global url."https://ahatojli4:${TOKEN}@github.com".insteadOf "https://github.com"
+      - name: Configure git for private modules
+        env:
+          TOKEN: ${{ secrets.READ_REPOSITORIES }}
+        run: git config --global url."https://ahatojli4:${TOKEN}@github.com".insteadOf "https://github.com"
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
@@ -22,7 +22,7 @@ jobs:
           # Optional: version of golangci-lint to use in form of v1.2 or v1.2.3 or `latest` to use the latest version
           version: v1.41.1
 
-          github-token: ${{secrets.TEST_TKN}}
+          #github-token: ${{secrets.TEST_TKN}}
 
           # Optional: working directory, useful for monorepos
           # working-directory: somedir
